@@ -1,9 +1,10 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft, Globe, Clock, MapPin, Map, Layers, Volume2, FileText,
-  Lightbulb, Zap, Trophy, Star, BookOpen, Flame, TrendingUp,
-  PlusCircle, BarChart2, Navigation, Share2, Plane,
+  ArrowLeft, Globe, Clock, MapPin, Map, Eye, Layers, Volume2,
+  CloudRain, Radio, VolumeX, FileText, Lightbulb, Zap, Trophy,
+  Star, BookOpen, Flame, TrendingUp, PlusCircle, BarChart2,
+  Navigation, Share2, Plane,
 } from 'lucide-react';
 
 const SECTIONS = [
@@ -21,8 +22,12 @@ const SECTIONS = [
     color: '#0EA5E9',
     features: [
       { Icon: Map, name: 'Live Flight Map', desc: 'Watch your aircraft trace a real great-circle arc in real time.' },
-      { Icon: Layers, name: 'View Modes', desc: 'Switch between an immersive cockpit and an overhead tracker view.' },
-      { Icon: Volume2, name: 'Ambient Sounds', desc: 'Study to cabin air, rainfall, brown noise, or complete silence.' },
+      { Icon: Eye, name: 'Cockpit View', desc: 'An immersive first-person perspective that follows your plane closely.' },
+      { Icon: Layers, name: 'Tracker View', desc: 'A zoomed-out overhead map showing your full route and progress.' },
+      { Icon: Volume2, name: 'Cabin Ambience', desc: 'Steady airplane cabin sounds for a realistic in-flight atmosphere.' },
+      { Icon: CloudRain, name: 'Rain Sounds', desc: 'Gentle rainfall audio to help you focus during your session.' },
+      { Icon: Radio, name: 'Brown Noise', desc: 'Deep, consistent background noise ideal for deep concentration.' },
+      { Icon: VolumeX, name: 'Silent Mode', desc: 'Fly in complete silence — no ambient audio, just focus.' },
       { Icon: FileText, name: 'Boarding Pass', desc: 'A boarding pass is issued at departure and stamped on arrival.' },
     ],
   },
@@ -92,7 +97,7 @@ export default function Tutorial() {
             className="text-[#1B1B1B] mb-2"
             style={{ fontFamily: 'Inter, sans-serif', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 700 }}
           >
-            How it Works
+            See How it Works
           </h1>
           <p
             className="text-[#8B8B8B]"
